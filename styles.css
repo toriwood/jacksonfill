@@ -102,7 +102,7 @@ div.menu {
   position: fixed;
   top: 100%;
   left: 0;
-  box-shadow: 0px 0px 15px 0px #8c8c8c;
+  box-shadow: 0px 0px 15px 0px black;
 }
 
 .menu ul {
@@ -336,7 +336,7 @@ div.contactinfo {
 
 .contactinfo div {
   display: inline-block;
-  width: 300px;
+  width: 350px;
   margin: 10px 20px;
 }
 
@@ -348,11 +348,16 @@ div.contactinfo {
 
 .contactinfo h4 {
   padding-top: 10px;
-  font-size: 75%;
+  font-size: .8em;
 }
 
 .contactinfo a {
   text-decoration: none;
+}
+
+#email-full {
+  font-size: 0.9em;
+  padding-top: 25px;
 }
 
 #map {
@@ -378,14 +383,13 @@ div.contactinfo {
 }
 
 #footer {
-  font-size: 60%;
+  font-size: .6em;
   height: 60px;
   width: 100%;
   background: #8c8c8c;
   color: white;
   z-index: 2;
   display: inline-block;
-  box-shadow: 0px 0px 15px 0px #8c8c8c;
 }
 
 
