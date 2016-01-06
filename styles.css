@@ -322,15 +322,45 @@ div.content {
   line-height: 1.2em;
 }
 
-
 #contact {    
   background-color: #8c8c8c;
   color: white; 
+  height: auto;
+}
+
+div.contactinfo {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.contactinfo div {
+  display: inline-block;
+  width: 300px;
+  margin: 10px 20px;
+}
+
+.contactinfo h3 {
+  font-weight: bolder;
+  padding: 10px 0 10px 0;
+  font-size: 1.3em;
+}
+
+.contactinfo h4 {
+  padding-top: 10px;
+  font-size: 75%;
+}
+
+.contactinfo a {
+  text-decoration: none;
 }
 
 #map {
+  max-width:500px;
   width: 95%;
-  height: 50%;
+  min-height: 200px;
+  max-height: 400px;
+  height: auto;
   margin: 0 auto;
 } 
 
@@ -348,7 +378,7 @@ div.content {
 }
 
 #footer {
-  font-size: 50%;
+  font-size: 60%;
   height: 50px;
   width: 100%;
   background: #8c8c8c;

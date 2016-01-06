@@ -1,13 +1,27 @@
+/*Globals*/
 var $w = $(window);
 var homeY = $w.height();
 
-$w.scroll(function(){
-    $(".top").css("opacity", 1 - $w.scrollTop() / 250);
-    $(".menu").css("opacity", 0 + $w.scrollTop() /250);
- });
+/*For obsfucating email address*/
+var a = new Array('jacksonfill.com', 'wbennett@)');
+
+$("#email a").attr("href", "mailto:"+a[1]+a[0]+"?Subject=JacksonFill%20Inquiry");
+
+
+
+// $w.scroll(function(){
+//     $(".top").css("opacity", 1 - $w.scrollTop() / 250);
+//     $(".menu").css("opacity", 0 + $w.scrollTop() /250);
+//  });
 
 $w.scroll(function() {
-		var menu = $('div.menu');
+    /*fading in the navbar and fading out the h2 element in the top div*/
+    $(".top").css("opacity", 1 - $w.scrollTop() / 250);
+    $(".menu").css("opacity", 0 + $w.scrollTop() /250);
+
+
+    /*Fixing the navbar to the top of the screen on scroll down*/
+    var menu = $('div.menu');
     var isFixed = false;
     $w.scroll(function() {
         var scrollBottom = $w.scrollTop() + homeY;
@@ -29,7 +43,7 @@ $w.scroll(function() {
             isFixed = false;
         }
     });
-});
+
 
 $.fn.is_on_screen = function(){
     var viewport = {
@@ -46,7 +60,8 @@ $.fn.is_on_screen = function(){
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 };
 
-$w.scroll(function() {
+
+    /*Animating the R&D icon*/
     var target = $("#randd img");
 
     if ( target.length > 0) {
@@ -61,9 +76,8 @@ $w.scroll(function() {
 
     }
 }
-});
 
-$w.scroll(function() {
+    /*Animating the Manufacturing icon*/   
     var target = $("#qc img");
 
     if ( target.length > 0) {
@@ -78,9 +92,8 @@ $w.scroll(function() {
 
     }
 }
-});
-
-$w.scroll(function() {
+    
+    /*Animating the Promotion Assembly icon*/
     var target = $("#pa img");
 
     if ( target.length > 0) {
@@ -95,9 +108,8 @@ $w.scroll(function() {
 
     }
 }
-});
 
-$w.scroll(function() {
+    /*Animating the Warehousing and Dist icon*/
     var target = $("#dist img");
 
     if ( target.length > 0) {
@@ -112,9 +124,11 @@ $w.scroll(function() {
 
     }
 }
+
 });
 
 
+/*Google Map*/
 function initialize() {
         var myLatLng = {lat: 30.47339, lng: -81.65614 };
 
@@ -128,7 +142,7 @@ function initialize() {
         var contentString = '<div id="mapContent"><h1>JacksonFill</h1>'+
                             '1420 Vantage Way South<br>'+
                             'Suite 104<br>Jacksonville, FL 32218<br><br>'+
-                            '(904) 741-0073 ext. 3001</div>';
+                            '(904) 771-1531</div>';
         
         var infoWindow = new google.maps.InfoWindow({
             content: contentString,
@@ -146,4 +160,3 @@ function initialize() {
       })
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-
