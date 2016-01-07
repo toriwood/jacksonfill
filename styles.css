@@ -1,14 +1,52 @@
+/*Aleo Light*/
+@font-face {
+    font-family: 'aleolight';
+    src: url('Aleo-Light-webfont.eot');
+    src: url('Aleo-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aleo-Light-webfont.woff') format('woff'),
+         url('Aleo-Light-webfont.ttf') format('truetype'),
+         url('Aleo-Light-webfont.svg#aleolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-/*@import url(https://fonts.googleapis.com/css?family=Lora);*/
-/*@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);*/
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100);
+}
 
+/*Aleo Light Italic*/
+@font-face {
+    font-family: 'aleolightitalic';
+    src: url('Aleo-LightItalic-webfont.eot');
+    src: url('Aleo-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aleo-LightItalic-webfont.woff') format('woff'),
+         url('Aleo-LightItalic-webfont.ttf') format('truetype'),
+         url('Aleo-LightItalic-webfont.svg#aleolightitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Aleo Bold*/
+@font-face {
+    font-family: 'aleobold';
+    src: url('Aleo-Bold-webfont.eot');
+    src: url('Aleo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aleo-Bold-webfont.woff') format('woff'),
+         url('Aleo-Bold-webfont.ttf') format('truetype'),
+         url('Aleo-Bold-webfont.svg#aleobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*Mobile first*/
 html, body, #wrapper {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    font-family: 'Roboto Slab', sans-serif;
-    font-weight: bold;
+    font-family: 'aleolight', sans-serif;
+    font-size: 0.8em;
+}
+
+@-ms-viewport {
+  width: device-width;
 }
 
 @-moz-keyframes bounce {
@@ -94,7 +132,7 @@ html, body, #wrapper {
 }
 
 div.menu {
-  height: 67px;
+  height: 30px;
   width: 100%;
   background: #F1F2F6;
   z-index: 2;
@@ -112,8 +150,8 @@ div.menu {
 .menu li {
   display: inline-block;
   float: right;
-  padding: 10px;
-  margin: 10px;
+  padding: 2px;
+  margin: 2px;
   border: 5px solid #661e2a;
   border-radius: 5px;
   background: transparent;
@@ -123,7 +161,7 @@ div.menu {
 }
 
 #logo-small {
-  height: 60px;
+  height: 25px;
   width: auto;
   float: left;
 }
@@ -318,8 +356,10 @@ div.content {
 }
 
 #about p {
+  font-weight: bold;
   font-size: 1.4em;
   line-height: 1.2em;
+  padding: 10px;
 }
 
 #contact {    
@@ -336,7 +376,7 @@ div.contactinfo {
 
 .contactinfo div {
   display: inline-block;
-  width: 350px;
+  width: 125px;
   margin: 10px 20px;
 }
 
@@ -348,16 +388,17 @@ div.contactinfo {
 
 .contactinfo h4 {
   padding-top: 10px;
-  font-size: .8em;
+  font-size: 1em;
 }
 
 .contactinfo a {
   text-decoration: none;
 }
 
-#email-full {
-  font-size: 0.9em;
-  padding-top: 25px;
+.contactinfo img {
+  max-width: 125px;
+  width: 100%;
+  height: auto;
 }
 
 #map {
@@ -395,10 +436,46 @@ div.contactinfo {
 
 /*MEDIA QUERIES*/
 
-@media screen and (min-width: 900px) {
+@media only screen and (max-width:768px) and (orientation: landscape) {
+  #logo-div img {
+    top: 20%;
+  }
+
+ .others {
+  height: 95%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+html, body, #wrapper {
+  font-size: 1em;
+}
+
+div.menu {
+  height: 67px;
+}
+
+.menu li {
+  padding: 10px;
+  margin: 10px;
+}
+
+#logo-small {
+  height: 60px;
+}
+
+.contactinfo div {
+  width: 30%;
+}
+
+}
+
+@media only screen and (min-width: 900px) {
 
 .others {
-  height: 65%;
+  height: 70%;
 }
 
 .others h1 {
@@ -423,8 +500,7 @@ div.contactinfo {
 } 
 }
 
-
-@media screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
 #map {
   width: 1000px;
   height: 50%;
@@ -438,7 +514,7 @@ div.contactinfo {
 
 }
 
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 
 .content {
   width:;

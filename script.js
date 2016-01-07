@@ -6,7 +6,7 @@ var homeY = $w.height();
 var a = new Array('jacksonfill.com', 'wbennett@');
 
 $("#email a").attr("href", "mailto:"+a[1]+a[0]+"?Subject=JacksonFill%20Inquiry");
-$("#email-full").html(a[1]+a[0]);
+$("#email-full").html(a[1]+'<br>'+a[0]);
 
 
 // $w.scroll(function(){
