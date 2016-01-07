@@ -40,6 +40,7 @@
 html, body, #wrapper {
     height: 100%;
     width: 100%;
+    left: 0;
     margin: 0 auto;
     font-family: 'aleolight', sans-serif;
     font-size: 0.8em;
@@ -138,7 +139,6 @@ div.menu {
   z-index: 2;
   display: inline-block;
   position: fixed;
-  top: 100%;
   left: 0;
   box-shadow: 0px 0px 15px 0px black;
 }
@@ -169,8 +169,6 @@ div.menu {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     z-index: -100;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -191,6 +189,7 @@ div.menu {
   z-index: 0;
   height: 100%;
   width: 100%;
+  left: 0;
 }
 
 #logo-div {
@@ -223,7 +222,7 @@ div.menu {
 #logo-div h1 {
     text-align: center;
     font-size: 3em;
-    margin: 0;
+    margin: 0 auto;
     margin-top: 15px;
     position: absolute;
     width: 100%;
@@ -239,6 +238,7 @@ div.menu {
 
 .others {
     width: 100%;
+    left: 0;
     height: 75%;
     text-align: center;
     font-size: 1.5em;
@@ -412,6 +412,8 @@ div.contactinfo {
   font-size: .6em;
   height: 60px;
   width: 100%;
+  left: 0;
+  bottom: 0;
   background: #8c8c8c;
   color: white;
   z-index: 2;
@@ -495,14 +497,6 @@ div.menu {
 .content {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-}
-
-@media only screen and (min-width: 1200px) {
-
-.content {
-  width:;
 }
 
 }
