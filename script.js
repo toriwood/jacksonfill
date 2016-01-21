@@ -1,6 +1,8 @@
 /*Globals*/
 var $w = $(window);
 var homeY = $w.height();
+var menu = $('div.menu');
+var isFixed = false;
 
 /*For obsfucating email address*/
 var a = new Array('jacksonfill.com', 'wbennett@');
@@ -14,6 +16,18 @@ $("#email-full").html(a[1]+'<br>'+a[0]);
 //     $(".menu").css("opacity", 0 + $w.scrollTop() /250);
 //  });
 
+$w.resize(function() {
+    var width = $w.width();
+
+    if (width < 768) {
+        menu.css({
+            display: 'none'
+        });
+        isFixed = false;
+    }
+
+});
+
 $w.scroll(function() {
     /*fading in the navbar and fading out the h2 element in the top div*/
     $(".top").css("opacity", 1 - $w.scrollTop() / 250);
@@ -21,28 +35,25 @@ $w.scroll(function() {
 
 
     /*Fixing the navbar to the top of the screen on scroll down*/
-    var menu = $('div.menu');
-    var isFixed = false;
-    $w.scroll(function() {
-        var scrollBottom = $w.scrollTop() + homeY;
-        var shouldBeFixed = scrollBottom > homeY;
-        if (shouldBeFixed && !isFixed) {
-            menu.css({
-                display: 'inline-block',
-                position: 'fixed',
-                top: 0,
-                left: 0
-            });
-            isFixed = true;
-        }
-        else if (!shouldBeFixed && isFixed)
-        {
-            menu.css({
-                display: 'none'
-            });
-            isFixed = false;
-        }
-    });
+    var scrollBottom = $w.scrollTop() + homeY;
+    var shouldBeFixed = scrollBottom > homeY;
+    var width = $w.width();
+    if (shouldBeFixed && !isFixed && width > 768) {
+        menu.css({
+            display: 'inline-block',
+            position: 'fixed',
+            top: 0,
+            left: 0
+        });
+        isFixed = true;
+    }
+    else if (!shouldBeFixed && isFixed)
+    {
+        menu.css({
+            display: 'none'
+        });
+        isFixed = false;
+    }
 
 
 $.fn.is_on_screen = function(){
