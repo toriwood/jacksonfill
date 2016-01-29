@@ -1,3 +1,12 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 /*Mobile first*/
 html, body, #wrapper {
     height: 100%;
@@ -67,7 +76,7 @@ html, body, #wrapper {
   margin-left:-20px;
   width: 40px;
   height: 40px;
-  background-image: url(images/down.png);
+  background-image: url(images/down-white.png);
   background-size: contain;
 }
 
@@ -97,57 +106,94 @@ p {
   font-size: 1.2em;
 }
 
-div.menu {
-  height: 30px;
-  width: 100%;
-  background: #F1F2F6;
-  z-index: 2;
-  display: inline-block;
-  position: fixed;
-  left: 0;
-  box-shadow: 0px 0px 15px 0px black;
+.nav {
+  margin-right: 10px;
 }
 
-.menu a {
+.nav a {
   text-decoration: none;
-  display: inline-block;
-  float: right;
-  padding: 3px;
-  margin: 2px;
-  border: 5px solid #661e2a;
-  border-radius: 10px;
+  padding: 0;
+  border: 2px solid #661e2a;
+  border-radius: 5px;
   background: transparent;
   color: #661e2a;
-  font-size: 1.1em;
+  font-size: 0.8em;
   font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  display: table;
+  margin: 0 auto;
+}
+  
+a {
+  font-size: 1.2em;
+}
+
+a, a:visited {
+  color: #661e2a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  color: #661e2a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar {
+  opacity: 0;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar, .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-collapse li {
+  margin: 2px;
+}
+
+a.navbar-brand {
+  border: none;
+  margin-top: -15px;
+}
+
+.navbar-nav>li>a {
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  }
+
+#email a, #email a:hover, #email a:visited {
+  color: white;
 }
 
 #logo-small {
-  height: 25px;
+  height: 60px;
   width: auto;
-  float: left;
+  border: none;
 }
 
-#bgpic { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-color: black;
-    background: url(images/white_bottles_main3.jpeg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_main3.jpeg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_main3.jpeg', sizingMethod='scale')";
-    margin: 0 auto;
+#top-div {
+  height: 100%;
+  background: url(images/assembly_mini.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale')";
 }
 
 #pic-div {
@@ -160,8 +206,8 @@ div.menu {
 #logo-div {
     margin: 0 auto;
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     top: 60%;
     left: 60%;
     z-index: 1;
@@ -188,7 +234,7 @@ div.menu {
     text-align: center;
     font-size: 2em;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 35px;
     position: absolute;
     width: 100%;
     top: 65%;
@@ -197,7 +243,7 @@ div.menu {
     -moz-transform: translateX(-50%) translateY(-65%);
     -webkit-transform: translateX(-50%) translateY(-65%);
     transform: translateX(-50%) translateY(-65%);
-    color: #661e2a;
+    color: white;
     font-weight: bold;
 }
 
@@ -222,17 +268,13 @@ div.menu {
     font-weight: bold;
 }
 
-.others a {
-  color: white;
-}
-
 .container {
   width: 25%;
   margin: 0 auto;
 }
 
-#bottles { 
-  background: url(images/white_bottles_prod.jpeg) no-repeat center center; 
+#bottler { 
+  background: url(images/bottler_mini.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -241,8 +283,8 @@ div.menu {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale')";
 }
 
-#manufacturing { 
-  background: url(images/manufacturing.jpeg) no-repeat center center; 
+#packing { 
+  background: url(images/packing_mini.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -252,7 +294,17 @@ div.menu {
 }
 
 #warehouse { 
-  background: url(images/warehouse.jpeg) no-repeat center center; 
+  background: url(images/warehouse_mini.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse.jpeg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse.jpeg', sizingMethod='scale')";
+}
+
+#truck { 
+  background: url(images/truck_mini.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -280,29 +332,19 @@ div.content {
   opacity: 0;
 }
 
-#randd {
+#randd, #about, #dist {
     background-color: white;
     color: #661e2a;
 }
 
-#qc {
+#pa, #manu {
     background-color: #661e2a;
     color: white;
 }
 
-#pa {
-    background-color: white;
-    color: #661e2a;  
-}
-
-#dist {
+#qc {
     background-color: #8c8c8c;
     color: white; 
-}
-
-#about {
-  background-color: #661e2a;
-  color: white;
 }
 
 #about p {
@@ -401,7 +443,7 @@ div.contactinfo {
   }
 
   #logo-div h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
  .others {
@@ -462,11 +504,11 @@ div.menu {
 }*/
 
 #logo-div h1 {
-  font-size: 3em;
+  font-size: 2.75em;
 }
 
 .others h1 {
-  font-size: 3em;
+  font-size: 2.75em;
   line-height: 1.75em;
   font-weight: bolder;
 }

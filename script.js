@@ -1,8 +1,5 @@
-/*Globals*/
 var $w = $(window);
-var homeY = $w.height();
-var menu = $('div.menu');
-var isFixed = false;
+
 
 /*For obsfucating email address*/
 var a = new Array('jacksonfill.com', 'wbennett@');
@@ -16,25 +13,29 @@ $("#email-full").html(a[1]+'<br>'+a[0]);
 //     $(".menu").css("opacity", 0 + $w.scrollTop() /250);
 //  });
 
-$w.resize(function() {
-    var width = $w.width();
+// $w.resize(function() {
+//     var menu = $('div.menu');
+//     var width = $w.width();
 
-    if (width < 768) {
-        menu.css({
-            display: 'none'
-        });
-        isFixed = false;
-    }
+//     if (width < 768) {
+//         menu.css({
+//             display: 'none'
+//         });
+//         isFixed = false;
+//     }
 
-});
+// });
 
 $w.scroll(function() {
+    var homeY = $w.height();
+    var isFixed = false;
     /*fading in the navbar and fading out the h2 element in the top div*/
     $(".top").css("opacity", 1 - $w.scrollTop() / 250);
-    $(".menu").css("opacity", 0 + $w.scrollTop() /250);
+    $(".menu").css("opacity", 0 + $w.scrollTop() / 250);
 
 
     /*Fixing the navbar to the top of the screen on scroll down*/
+    var menu = $('div.menu');
     var scrollBottom = $w.scrollTop() + homeY;
     var shouldBeFixed = scrollBottom > homeY;
     var width = $w.width();
@@ -71,71 +72,42 @@ $.fn.is_on_screen = function(){
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 };
 
+$.fn.bounce = function(target) {
+    if ( target.length > 0) {
+        if (target.is_on_screen() ) {
+            target.animate({
+            "max-width": '250px',
+            "min-width": '75px',
+            height: 'auto',
+            opacity: '1.0'
+        },1000);
+
+            target.addClass('bounce-once');
+
+        }
+    }
+};
+
+    /*Animating the Manufacturing icon*/
+    var target = $("#manu img");
+    $.fn.bounce(target);    
+
+    /*Animating the Quality Control icon*/
+    var target = $("#qc img");
+    $.fn.bounce(target);
 
     /*Animating the R&D icon*/
     var target = $("#randd img");
+    $.fn.bounce(target);
 
-    if ( target.length > 0) {
-    if (target.is_on_screen() ) {
-        target.animate({
-        "max-width": '250px',
-        height: 'auto',
-        opacity: '1.0'
-    },1000);
-
-        target.addClass('bounce-once');
-
-    }
-}
-
-    /*Animating the Manufacturing icon*/   
-    var target = $("#qc img");
-
-    if ( target.length > 0) {
-    if (target.is_on_screen() ) {
-        target.animate({
-        "max-width": '250px',
-        height: 'auto',
-        opacity: '1.0'
-    },1000);
-
-        target.addClass('bounce-once');
-
-    }
-}
-    
     /*Animating the Promotion Assembly icon*/
     var target = $("#pa img");
-
-    if ( target.length > 0) {
-    if (target.is_on_screen() ) {
-        target.animate({
-        "max-width": '250px',
-        height: 'auto',
-        opacity: '1.0'
-    },1000);
-
-        target.addClass('bounce-once');
-
-    }
-}
+    $.fn.bounce(target);
 
     /*Animating the Warehousing and Dist icon*/
     var target = $("#dist img");
-
-    if ( target.length > 0) {
-    if (target.is_on_screen() ) {
-        target.animate({
-        "max-width": '250px',
-        height: 'auto',
-        opacity: '1.0'
-    },1000);
-
-        target.addClass('bounce-once');
-
-    }
-}
-
+    $.fn.bounce(target);
+    
 });
 
 
