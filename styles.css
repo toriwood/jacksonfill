@@ -499,9 +499,9 @@ div.menu {
 
 @media only screen and (min-width: 56em) {
 
-/*.others {
-  height: 110%;
-}*/
+#logo-div img {
+  top: 20%;
+}
 
 #logo-div h1 {
   font-size: 2.75em;
