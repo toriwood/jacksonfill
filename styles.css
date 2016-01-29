@@ -187,13 +187,13 @@ a.navbar-brand {
 
 #top-div {
   height: 100%;
-  background: url(images/assembly_mini.jpg) no-repeat center center; 
+  background: url(images/assembly_mini2.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/assembly_mini.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/assembly_mini.png', sizingMethod='scale')";
 }
 
 #pic-div {
@@ -268,49 +268,49 @@ a.navbar-brand {
     font-weight: bold;
 }
 
-.container {
+.contain {
   width: 25%;
   margin: 0 auto;
 }
 
 #bottler { 
-  background: url(images/bottler_mini.jpg) no-repeat center center; 
+  background: url(images/bottler_mini2.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/white_bottles_prod.jpeg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bottler_mini.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bottler_mini.png', sizingMethod='scale')";
 }
 
 #packing { 
-  background: url(images/packing_mini.jpg) no-repeat center center; 
+  background: url(images/packing_mini2.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/manufacturing.jpeg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/manufacturing.jpeg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/packing_mini.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/packing_mini.png', sizingMethod='scale')";
 }
 
 #warehouse { 
-  background: url(images/warehouse_mini.jpg) no-repeat center center; 
+  background: url(images/warehouse_mini2.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse.jpeg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse.jpeg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse_mini.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse_mini.png', sizingMethod='scale')";
 }
 
 #truck { 
-  background: url(images/truck_mini.jpg) no-repeat center center; 
+  background: url(images/truck_mini2.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse.jpeg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/warehouse.jpeg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/truck_mini.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/truck_mini.png', sizingMethod='scale')";
 }
 
 div.content {
@@ -332,7 +332,7 @@ div.content {
   opacity: 0;
 }
 
-#randd, #about, #dist {
+#randd, #dist {
     background-color: white;
     color: #661e2a;
 }
@@ -342,7 +342,7 @@ div.content {
     color: white;
 }
 
-#qc {
+#qc, #about {
     background-color: #8c8c8c;
     color: white; 
 }
