@@ -26,13 +26,17 @@ $("#email-full").html(a[1]+'<br>'+a[0]);
 
 // });
 
+// jump to 80px above id
+$w.on("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 80);
+});
+
 $w.scroll(function() {
     var homeY = $w.height();
     var isFixed = false;
     /*fading in the navbar and fading out the h2 element in the top div*/
     $(".top").css("opacity", 1 - $w.scrollTop() / 250);
     $(".menu").css("opacity", 0 + $w.scrollTop() / 250);
-
 
     /*Fixing the navbar to the top of the screen on scroll down*/
     var menu = $('div.menu');

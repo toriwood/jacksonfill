@@ -274,7 +274,7 @@ a.navbar-brand {
 }
 
 #bottler { 
-  background: url(images/bottler_mini2.jpg) no-repeat center center; 
+  background: url(images/bottler_mini.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -294,7 +294,7 @@ a.navbar-brand {
 }
 
 #warehouse { 
-  background: url(images/warehouse_mini2.jpg) no-repeat center center; 
+  background: url(images/warehouse_mini.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
