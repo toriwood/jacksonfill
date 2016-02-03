@@ -332,6 +332,16 @@ div.content {
   opacity: 0;
 }
 
+#about-anchor, #contact-anchor, 
+#manu-anchor, #qc-anchor, 
+#randd-anchor, #pa-anchor, 
+#dist-anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
 #randd, #dist {
     background-color: white;
     color: #661e2a;

@@ -26,10 +26,10 @@ $("#email-full").html(a[1]+'<br>'+a[0]);
 
 // });
 
-// jump to 80px above id
-$w.on("hashchange", function () {
-    window.scrollTo(window.scrollX, window.scrollY - 80);
-});
+// // jump to 80px above id
+// $w.on("hashchange", function () {
+//     window.scrollTo(window.scrollX, window.scrollY - 80);
+// });
 
 $w.scroll(function() {
     var homeY = $w.height();
