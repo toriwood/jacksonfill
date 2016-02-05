@@ -80,9 +80,10 @@ $.fn.bounce = function(target) {
     if ( target.length > 0) {
         if (target.is_on_screen() ) {
             target.animate({
-            "max-width": '250px',
+            "max-width": '200px',
             "min-width": '75px',
             height: 'auto',
+            margin: '0 auto',
             opacity: '1.0'
         },1000);
 

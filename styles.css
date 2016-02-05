@@ -325,9 +325,10 @@ div.content {
 
 .icons {
   position: relative;
-  max-width: 250px;
+  max-width: 200px;
   width: 100%;
   height: auto;
+  margin: 0 auto;
   padding-bottom: 5px;
   opacity: 0;
 }
